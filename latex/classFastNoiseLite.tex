@@ -1,0 +1,615 @@
+\hypertarget{classFastNoiseLite}{}\doxysection{Fast\+Noise\+Lite Class Reference}
+\label{classFastNoiseLite}\index{FastNoiseLite@{FastNoiseLite}}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structFastNoiseLite_1_1Arguments__must__be__floating__point__values}{Arguments\+\_\+must\+\_\+be\+\_\+floating\+\_\+point\+\_\+values}}
+\item 
+struct \mbox{\hyperlink{structFastNoiseLite_1_1Arguments__must__be__floating__point__values_3_01double_01_4}{Arguments\+\_\+must\+\_\+be\+\_\+floating\+\_\+point\+\_\+values$<$ double $>$}}
+\item 
+struct \mbox{\hyperlink{structFastNoiseLite_1_1Arguments__must__be__floating__point__values_3_01float_01_4}{Arguments\+\_\+must\+\_\+be\+\_\+floating\+\_\+point\+\_\+values$<$ float $>$}}
+\item 
+struct \mbox{\hyperlink{structFastNoiseLite_1_1Arguments__must__be__floating__point__values_3_01long_01double_01_4}{Arguments\+\_\+must\+\_\+be\+\_\+floating\+\_\+point\+\_\+values$<$ long double $>$}}
+\item 
+struct \mbox{\hyperlink{structFastNoiseLite_1_1Lookup}{Lookup}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classFastNoiseLite_a92524ce8eee37bd74571a624244d3b0a}\label{classFastNoiseLite_a92524ce8eee37bd74571a624244d3b0a}} 
+enum {\bfseries Noise\+Type} \{ \newline
+{\bfseries Noise\+Type\+\_\+\+Open\+Simplex2}
+, {\bfseries Noise\+Type\+\_\+\+Open\+Simplex2S}
+, {\bfseries Noise\+Type\+\_\+\+Cellular}
+, {\bfseries Noise\+Type\+\_\+\+Perlin}
+, \newline
+{\bfseries Noise\+Type\+\_\+\+Value\+Cubic}
+, {\bfseries Noise\+Type\+\_\+\+Value}
+ \}
+\item 
+\mbox{\Hypertarget{classFastNoiseLite_adc4818a7309d29312a3732261beea8af}\label{classFastNoiseLite_adc4818a7309d29312a3732261beea8af}} 
+enum {\bfseries Rotation\+Type3D} \{ {\bfseries Rotation\+Type3\+D\+\_\+\+None}
+, {\bfseries Rotation\+Type3\+D\+\_\+\+Improve\+XYPlanes}
+, {\bfseries Rotation\+Type3\+D\+\_\+\+Improve\+XZPlanes}
+ \}
+\item 
+\mbox{\Hypertarget{classFastNoiseLite_a691456d5ac06f0b2a828b0e2d3e7f7f7}\label{classFastNoiseLite_a691456d5ac06f0b2a828b0e2d3e7f7f7}} 
+enum {\bfseries Fractal\+Type} \{ \newline
+{\bfseries Fractal\+Type\+\_\+\+None}
+, {\bfseries Fractal\+Type\+\_\+\+FBm}
+, {\bfseries Fractal\+Type\+\_\+\+Ridged}
+, {\bfseries Fractal\+Type\+\_\+\+Ping\+Pong}
+, \newline
+{\bfseries Fractal\+Type\+\_\+\+Domain\+Warp\+Progressive}
+, {\bfseries Fractal\+Type\+\_\+\+Domain\+Warp\+Independent}
+ \}
+\item 
+\mbox{\Hypertarget{classFastNoiseLite_a398050da8e86742d6f0e8fb4cdf9851c}\label{classFastNoiseLite_a398050da8e86742d6f0e8fb4cdf9851c}} 
+enum {\bfseries Cellular\+Distance\+Function} \{ {\bfseries Cellular\+Distance\+Function\+\_\+\+Euclidean}
+, {\bfseries Cellular\+Distance\+Function\+\_\+\+Euclidean\+Sq}
+, {\bfseries Cellular\+Distance\+Function\+\_\+\+Manhattan}
+, {\bfseries Cellular\+Distance\+Function\+\_\+\+Hybrid}
+ \}
+\item 
+\mbox{\Hypertarget{classFastNoiseLite_a5b30b7fbc75d02e033e9776dbea52e82}\label{classFastNoiseLite_a5b30b7fbc75d02e033e9776dbea52e82}} 
+enum {\bfseries Cellular\+Return\+Type} \{ \newline
+{\bfseries Cellular\+Return\+Type\+\_\+\+Cell\+Value}
+, {\bfseries Cellular\+Return\+Type\+\_\+\+Distance}
+, {\bfseries Cellular\+Return\+Type\+\_\+\+Distance2}
+, {\bfseries Cellular\+Return\+Type\+\_\+\+Distance2\+Add}
+, \newline
+{\bfseries Cellular\+Return\+Type\+\_\+\+Distance2\+Sub}
+, {\bfseries Cellular\+Return\+Type\+\_\+\+Distance2\+Mul}
+, {\bfseries Cellular\+Return\+Type\+\_\+\+Distance2\+Div}
+ \}
+\item 
+\mbox{\Hypertarget{classFastNoiseLite_a6e3acdac4a6f273e70240731c9a4a913}\label{classFastNoiseLite_a6e3acdac4a6f273e70240731c9a4a913}} 
+enum {\bfseries Domain\+Warp\+Type} \{ {\bfseries Domain\+Warp\+Type\+\_\+\+Open\+Simplex2}
+, {\bfseries Domain\+Warp\+Type\+\_\+\+Open\+Simplex2\+Reduced}
+, {\bfseries Domain\+Warp\+Type\+\_\+\+Basic\+Grid}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classFastNoiseLite_aac059288dbce5a0ddcdd54c82df9aaf9}{Fast\+Noise\+Lite}} (int seed=1337)
+\begin{DoxyCompactList}\small\item\em Create new Fast\+Noise object with optional seed \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classFastNoiseLite_a4d2f591a9fb81fa37ec4ae45694ae90e}{Set\+Seed}} (int seed)
+\begin{DoxyCompactList}\small\item\em Sets seed used for all noise types \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classFastNoiseLite_a6e268d7e687b658f83dee38ea7dc1afc}{Set\+Frequency}} (float frequency)
+\begin{DoxyCompactList}\small\item\em Sets frequency for all noise types \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classFastNoiseLite_af345b52cbe9b499eb6a0c1d9b72a738f}{Set\+Noise\+Type}} (Noise\+Type noise\+Type)
+\begin{DoxyCompactList}\small\item\em Sets noise algorithm used for Get\+Noise(...) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classFastNoiseLite_a704dfe555b6ee0456707bb31e0aa8c0c}{Set\+Rotation\+Type3D}} (Rotation\+Type3D rotation\+Type3D)
+\begin{DoxyCompactList}\small\item\em Sets domain rotation type for 3D Noise and 3D Domain\+Warp. Can aid in reducing directional artifacts when sampling a 2D plane in 3D \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classFastNoiseLite_aaaff254bccb75fe64d7eaa75fe3930d6}{Set\+Fractal\+Type}} (Fractal\+Type fractal\+Type)
+\begin{DoxyCompactList}\small\item\em Sets method for combining octaves in all fractal noise types \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classFastNoiseLite_a220275b5be1d2137f0a2f232a07e0792}{Set\+Fractal\+Octaves}} (int octaves)
+\begin{DoxyCompactList}\small\item\em Sets octave count for all fractal noise types \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classFastNoiseLite_a29f35540c2eba7aa4378a73481bce283}{Set\+Fractal\+Lacunarity}} (float lacunarity)
+\begin{DoxyCompactList}\small\item\em Sets octave lacunarity for all fractal noise types \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classFastNoiseLite_aa1b68b34d506dd498533d7849a41fa78}{Set\+Fractal\+Gain}} (float gain)
+\begin{DoxyCompactList}\small\item\em Sets octave gain for all fractal noise types \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classFastNoiseLite_aca5f269464ab16934796ded272a12ffc}{Set\+Fractal\+Weighted\+Strength}} (float weighted\+Strength)
+\begin{DoxyCompactList}\small\item\em Sets octave weighting for all none Domain\+Warp fratal types \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classFastNoiseLite_ac09b58924278defc443addb34cf80f59}{Set\+Fractal\+Ping\+Pong\+Strength}} (float ping\+Pong\+Strength)
+\begin{DoxyCompactList}\small\item\em Sets strength of the fractal ping pong effect \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classFastNoiseLite_a3bf01ec5bf90b724d43dfffd77280a1a}{Set\+Cellular\+Distance\+Function}} (Cellular\+Distance\+Function cellular\+Distance\+Function)
+\begin{DoxyCompactList}\small\item\em Sets distance function used in cellular noise calculations \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classFastNoiseLite_a376f2fc231bbdc600fd70f423e84da8f}{Set\+Cellular\+Return\+Type}} (Cellular\+Return\+Type cellular\+Return\+Type)
+\begin{DoxyCompactList}\small\item\em Sets return type from cellular noise calculations \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classFastNoiseLite_ae49c55743d5782ad3c752ccf2b08ef00}{Set\+Cellular\+Jitter}} (float cellular\+Jitter)
+\begin{DoxyCompactList}\small\item\em Sets the maximum distance a cellular point can move from it\textquotesingle{}s grid position \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classFastNoiseLite_a22e449e628ce14581ca277cb8915f1ef}{Set\+Domain\+Warp\+Type}} (Domain\+Warp\+Type domain\+Warp\+Type)
+\begin{DoxyCompactList}\small\item\em Sets the warp algorithm when using Domain\+Warp(...) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classFastNoiseLite_a5d5677498f978e13915b241901885cc9}{Set\+Domain\+Warp\+Amp}} (float domain\+Warp\+Amp)
+\begin{DoxyCompactList}\small\item\em Sets the maximum warp distance from original position when using Domain\+Warp(...) \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename FNfloat $>$ }\\float \mbox{\hyperlink{classFastNoiseLite_ac5acf978145eba3730bb46033546c89c}{Get\+Noise}} (FNfloat x, FNfloat y) const
+\begin{DoxyCompactList}\small\item\em 2D noise at given position using current settings \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename FNfloat $>$ }\\float \mbox{\hyperlink{classFastNoiseLite_ab283c7ec7664484731c49f580a73d425}{Get\+Noise}} (FNfloat x, FNfloat y, FNfloat z) const
+\begin{DoxyCompactList}\small\item\em 3D noise at given position using current settings \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename FNfloat $>$ }\\void \mbox{\hyperlink{classFastNoiseLite_a779a61505f0ba2c3854c3b14e86baf08}{Domain\+Warp}} (FNfloat \&x, FNfloat \&y) const
+\begin{DoxyCompactList}\small\item\em 2D warps the input position using current domain warp settings \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename FNfloat $>$ }\\void \mbox{\hyperlink{classFastNoiseLite_a7e24432919ce9cf6930442f5bdeaeb15}{Domain\+Warp}} (FNfloat \&x, FNfloat \&y, FNfloat \&z) const
+\begin{DoxyCompactList}\small\item\em 3D warps the input position using current domain warp settings \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classFastNoiseLite_ad34674224c2780f5235f5e54a19e8408}\label{classFastNoiseLite_ad34674224c2780f5235f5e54a19e8408}} 
+enum {\bfseries Transform\+Type3D} \{ {\bfseries Transform\+Type3\+D\+\_\+\+None}
+, {\bfseries Transform\+Type3\+D\+\_\+\+Improve\+XYPlanes}
+, {\bfseries Transform\+Type3\+D\+\_\+\+Improve\+XZPlanes}
+, {\bfseries Transform\+Type3\+D\+\_\+\+Default\+Open\+Simplex2}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classFastNoiseLite_a6d6d8c26846bc12dab68093605812539}\label{classFastNoiseLite_a6d6d8c26846bc12dab68093605812539}} 
+void {\bfseries Calculate\+Fractal\+Bounding} ()
+\item 
+\mbox{\Hypertarget{classFastNoiseLite_a05f3a612f2002d1f4e0d1ba2c1496e3c}\label{classFastNoiseLite_a05f3a612f2002d1f4e0d1ba2c1496e3c}} 
+float {\bfseries Grad\+Coord} (int seed, int x\+Primed, int y\+Primed, float xd, float yd) const
+\item 
+\mbox{\Hypertarget{classFastNoiseLite_a0e55d87883ba381bda2c3d50f5e1854e}\label{classFastNoiseLite_a0e55d87883ba381bda2c3d50f5e1854e}} 
+float {\bfseries Grad\+Coord} (int seed, int x\+Primed, int y\+Primed, int z\+Primed, float xd, float yd, float zd) const
+\item 
+\mbox{\Hypertarget{classFastNoiseLite_a06cb84eaf0cf06b343b21214833e2f51}\label{classFastNoiseLite_a06cb84eaf0cf06b343b21214833e2f51}} 
+void {\bfseries Grad\+Coord\+Out} (int seed, int x\+Primed, int y\+Primed, float \&xo, float \&yo) const
+\item 
+\mbox{\Hypertarget{classFastNoiseLite_a2fff0d975a3215c7c050a5585b8ef948}\label{classFastNoiseLite_a2fff0d975a3215c7c050a5585b8ef948}} 
+void {\bfseries Grad\+Coord\+Out} (int seed, int x\+Primed, int y\+Primed, int z\+Primed, float \&xo, float \&yo, float \&zo) const
+\item 
+\mbox{\Hypertarget{classFastNoiseLite_af332d959c4c9321d20cef03865c13143}\label{classFastNoiseLite_af332d959c4c9321d20cef03865c13143}} 
+void {\bfseries Grad\+Coord\+Dual} (int seed, int x\+Primed, int y\+Primed, float xd, float yd, float \&xo, float \&yo) const
+\item 
+\mbox{\Hypertarget{classFastNoiseLite_ab3f23392ddeb598845855c01ab6841e4}\label{classFastNoiseLite_ab3f23392ddeb598845855c01ab6841e4}} 
+void {\bfseries Grad\+Coord\+Dual} (int seed, int x\+Primed, int y\+Primed, int z\+Primed, float xd, float yd, float zd, float \&xo, float \&yo, float \&zo) const
+\item 
+\mbox{\Hypertarget{classFastNoiseLite_a2276203f1c7f2731c58e18443014d62b}\label{classFastNoiseLite_a2276203f1c7f2731c58e18443014d62b}} 
+{\footnotesize template$<$typename FNfloat $>$ }\\float {\bfseries Gen\+Noise\+Single} (int seed, FNfloat x, FNfloat y) const
+\item 
+\mbox{\Hypertarget{classFastNoiseLite_a1331a512b421c0e2a4c4de651707f964}\label{classFastNoiseLite_a1331a512b421c0e2a4c4de651707f964}} 
+{\footnotesize template$<$typename FNfloat $>$ }\\float {\bfseries Gen\+Noise\+Single} (int seed, FNfloat x, FNfloat y, FNfloat z) const
+\item 
+\mbox{\Hypertarget{classFastNoiseLite_a652ec43182c49bc2de3f038515f524ef}\label{classFastNoiseLite_a652ec43182c49bc2de3f038515f524ef}} 
+{\footnotesize template$<$typename FNfloat $>$ }\\void {\bfseries Transform\+Noise\+Coordinate} (FNfloat \&x, FNfloat \&y) const
+\item 
+\mbox{\Hypertarget{classFastNoiseLite_a9e0f9b623e15308d823523ded76d8e92}\label{classFastNoiseLite_a9e0f9b623e15308d823523ded76d8e92}} 
+{\footnotesize template$<$typename FNfloat $>$ }\\void {\bfseries Transform\+Noise\+Coordinate} (FNfloat \&x, FNfloat \&y, FNfloat \&z) const
+\item 
+\mbox{\Hypertarget{classFastNoiseLite_a7f9ba36d0f14fc43fb9e52f1e14494fb}\label{classFastNoiseLite_a7f9ba36d0f14fc43fb9e52f1e14494fb}} 
+void {\bfseries Update\+Transform\+Type3D} ()
+\item 
+\mbox{\Hypertarget{classFastNoiseLite_aaeaa84a21bf84a57b7807255ce9cf464}\label{classFastNoiseLite_aaeaa84a21bf84a57b7807255ce9cf464}} 
+{\footnotesize template$<$typename FNfloat $>$ }\\void {\bfseries Transform\+Domain\+Warp\+Coordinate} (FNfloat \&x, FNfloat \&y) const
+\item 
+\mbox{\Hypertarget{classFastNoiseLite_aa5cdaceb73e8273858144c3f27415c7d}\label{classFastNoiseLite_aa5cdaceb73e8273858144c3f27415c7d}} 
+{\footnotesize template$<$typename FNfloat $>$ }\\void {\bfseries Transform\+Domain\+Warp\+Coordinate} (FNfloat \&x, FNfloat \&y, FNfloat \&z) const
+\item 
+\mbox{\Hypertarget{classFastNoiseLite_aeebd1f42cf08230335b6c58cb725f6d0}\label{classFastNoiseLite_aeebd1f42cf08230335b6c58cb725f6d0}} 
+void {\bfseries Update\+Warp\+Transform\+Type3D} ()
+\item 
+\mbox{\Hypertarget{classFastNoiseLite_a8e9a610e4e9492455bf7b6f3ff66b7e8}\label{classFastNoiseLite_a8e9a610e4e9492455bf7b6f3ff66b7e8}} 
+{\footnotesize template$<$typename FNfloat $>$ }\\float {\bfseries Gen\+Fractal\+FBm} (FNfloat x, FNfloat y) const
+\item 
+\mbox{\Hypertarget{classFastNoiseLite_a8b90f78ec6b63b108223b10cf833201d}\label{classFastNoiseLite_a8b90f78ec6b63b108223b10cf833201d}} 
+{\footnotesize template$<$typename FNfloat $>$ }\\float {\bfseries Gen\+Fractal\+FBm} (FNfloat x, FNfloat y, FNfloat z) const
+\item 
+\mbox{\Hypertarget{classFastNoiseLite_a812f3e4575bbb18242dace552e387ce5}\label{classFastNoiseLite_a812f3e4575bbb18242dace552e387ce5}} 
+{\footnotesize template$<$typename FNfloat $>$ }\\float {\bfseries Gen\+Fractal\+Ridged} (FNfloat x, FNfloat y) const
+\item 
+\mbox{\Hypertarget{classFastNoiseLite_a372d33f25e60bb84ed497f033cd44619}\label{classFastNoiseLite_a372d33f25e60bb84ed497f033cd44619}} 
+{\footnotesize template$<$typename FNfloat $>$ }\\float {\bfseries Gen\+Fractal\+Ridged} (FNfloat x, FNfloat y, FNfloat z) const
+\item 
+\mbox{\Hypertarget{classFastNoiseLite_ada5e3bb41e53c4c84fc7160f6855a30b}\label{classFastNoiseLite_ada5e3bb41e53c4c84fc7160f6855a30b}} 
+{\footnotesize template$<$typename FNfloat $>$ }\\float {\bfseries Gen\+Fractal\+Ping\+Pong} (FNfloat x, FNfloat y) const
+\item 
+\mbox{\Hypertarget{classFastNoiseLite_afde2043342de00dea478fdb208ef70bc}\label{classFastNoiseLite_afde2043342de00dea478fdb208ef70bc}} 
+{\footnotesize template$<$typename FNfloat $>$ }\\float {\bfseries Gen\+Fractal\+Ping\+Pong} (FNfloat x, FNfloat y, FNfloat z) const
+\item 
+\mbox{\Hypertarget{classFastNoiseLite_a1b82cd90da98cdd33d30b846c13343ae}\label{classFastNoiseLite_a1b82cd90da98cdd33d30b846c13343ae}} 
+{\footnotesize template$<$typename FNfloat $>$ }\\float {\bfseries Single\+Simplex} (int seed, FNfloat x, FNfloat y) const
+\item 
+\mbox{\Hypertarget{classFastNoiseLite_ac71a3e77feaa14fc75ec81593483fc4c}\label{classFastNoiseLite_ac71a3e77feaa14fc75ec81593483fc4c}} 
+{\footnotesize template$<$typename FNfloat $>$ }\\float {\bfseries Single\+Open\+Simplex2} (int seed, FNfloat x, FNfloat y, FNfloat z) const
+\item 
+\mbox{\Hypertarget{classFastNoiseLite_aaa9e3c5f7c3533215e97d5f22c9cd851}\label{classFastNoiseLite_aaa9e3c5f7c3533215e97d5f22c9cd851}} 
+{\footnotesize template$<$typename FNfloat $>$ }\\float {\bfseries Single\+Open\+Simplex2S} (int seed, FNfloat x, FNfloat y) const
+\item 
+\mbox{\Hypertarget{classFastNoiseLite_af9446d9f1c657957e689876898a5e117}\label{classFastNoiseLite_af9446d9f1c657957e689876898a5e117}} 
+{\footnotesize template$<$typename FNfloat $>$ }\\float {\bfseries Single\+Open\+Simplex2S} (int seed, FNfloat x, FNfloat y, FNfloat z) const
+\item 
+\mbox{\Hypertarget{classFastNoiseLite_a143427440981833cf12e8fbeb8ec42b8}\label{classFastNoiseLite_a143427440981833cf12e8fbeb8ec42b8}} 
+{\footnotesize template$<$typename FNfloat $>$ }\\float {\bfseries Single\+Cellular} (int seed, FNfloat x, FNfloat y) const
+\item 
+\mbox{\Hypertarget{classFastNoiseLite_a43f18d47106610ca4fae2667044bfc45}\label{classFastNoiseLite_a43f18d47106610ca4fae2667044bfc45}} 
+{\footnotesize template$<$typename FNfloat $>$ }\\float {\bfseries Single\+Cellular} (int seed, FNfloat x, FNfloat y, FNfloat z) const
+\item 
+\mbox{\Hypertarget{classFastNoiseLite_a52effc9c45621e394a57d373b2c7ecc1}\label{classFastNoiseLite_a52effc9c45621e394a57d373b2c7ecc1}} 
+{\footnotesize template$<$typename FNfloat $>$ }\\float {\bfseries Single\+Perlin} (int seed, FNfloat x, FNfloat y) const
+\item 
+\mbox{\Hypertarget{classFastNoiseLite_a5752ba9c1e99b39f7eebfd4cf3da8e96}\label{classFastNoiseLite_a5752ba9c1e99b39f7eebfd4cf3da8e96}} 
+{\footnotesize template$<$typename FNfloat $>$ }\\float {\bfseries Single\+Perlin} (int seed, FNfloat x, FNfloat y, FNfloat z) const
+\item 
+\mbox{\Hypertarget{classFastNoiseLite_ad711912ac1d26f8c97362a9cc0a78978}\label{classFastNoiseLite_ad711912ac1d26f8c97362a9cc0a78978}} 
+{\footnotesize template$<$typename FNfloat $>$ }\\float {\bfseries Single\+Value\+Cubic} (int seed, FNfloat x, FNfloat y) const
+\item 
+\mbox{\Hypertarget{classFastNoiseLite_a7a92832aaa2806274738d84bab64d1c8}\label{classFastNoiseLite_a7a92832aaa2806274738d84bab64d1c8}} 
+{\footnotesize template$<$typename FNfloat $>$ }\\float {\bfseries Single\+Value\+Cubic} (int seed, FNfloat x, FNfloat y, FNfloat z) const
+\item 
+\mbox{\Hypertarget{classFastNoiseLite_a5b24f72e0eb588de17b37612253abf63}\label{classFastNoiseLite_a5b24f72e0eb588de17b37612253abf63}} 
+{\footnotesize template$<$typename FNfloat $>$ }\\float {\bfseries Single\+Value} (int seed, FNfloat x, FNfloat y) const
+\item 
+\mbox{\Hypertarget{classFastNoiseLite_a1ebb1aba2c7fa2000d06d33c77475429}\label{classFastNoiseLite_a1ebb1aba2c7fa2000d06d33c77475429}} 
+{\footnotesize template$<$typename FNfloat $>$ }\\float {\bfseries Single\+Value} (int seed, FNfloat x, FNfloat y, FNfloat z) const
+\item 
+\mbox{\Hypertarget{classFastNoiseLite_aa6c6438f68f556177e64b59750d19c7c}\label{classFastNoiseLite_aa6c6438f68f556177e64b59750d19c7c}} 
+{\footnotesize template$<$typename FNfloat $>$ }\\void {\bfseries Do\+Single\+Domain\+Warp} (int seed, float amp, float freq, FNfloat x, FNfloat y, FNfloat \&xr, FNfloat \&yr) const
+\item 
+\mbox{\Hypertarget{classFastNoiseLite_a65ea8382136ca7b4cde82eb7131da4f9}\label{classFastNoiseLite_a65ea8382136ca7b4cde82eb7131da4f9}} 
+{\footnotesize template$<$typename FNfloat $>$ }\\void {\bfseries Do\+Single\+Domain\+Warp} (int seed, float amp, float freq, FNfloat x, FNfloat y, FNfloat z, FNfloat \&xr, FNfloat \&yr, FNfloat \&zr) const
+\item 
+\mbox{\Hypertarget{classFastNoiseLite_a0203bb85d55f3507cfde54c7955c1d92}\label{classFastNoiseLite_a0203bb85d55f3507cfde54c7955c1d92}} 
+{\footnotesize template$<$typename FNfloat $>$ }\\void {\bfseries Domain\+Warp\+Single} (FNfloat \&x, FNfloat \&y) const
+\item 
+\mbox{\Hypertarget{classFastNoiseLite_a2a970d7497876b0d6755a23e776dc225}\label{classFastNoiseLite_a2a970d7497876b0d6755a23e776dc225}} 
+{\footnotesize template$<$typename FNfloat $>$ }\\void {\bfseries Domain\+Warp\+Single} (FNfloat \&x, FNfloat \&y, FNfloat \&z) const
+\item 
+\mbox{\Hypertarget{classFastNoiseLite_a52d2af3ba683fd5cbbf276539965a433}\label{classFastNoiseLite_a52d2af3ba683fd5cbbf276539965a433}} 
+{\footnotesize template$<$typename FNfloat $>$ }\\void {\bfseries Domain\+Warp\+Fractal\+Progressive} (FNfloat \&x, FNfloat \&y) const
+\item 
+\mbox{\Hypertarget{classFastNoiseLite_a1602e743cbccaebd61de57823e358871}\label{classFastNoiseLite_a1602e743cbccaebd61de57823e358871}} 
+{\footnotesize template$<$typename FNfloat $>$ }\\void {\bfseries Domain\+Warp\+Fractal\+Progressive} (FNfloat \&x, FNfloat \&y, FNfloat \&z) const
+\item 
+\mbox{\Hypertarget{classFastNoiseLite_a535eeb28d70929bccb1fca95cf73690c}\label{classFastNoiseLite_a535eeb28d70929bccb1fca95cf73690c}} 
+{\footnotesize template$<$typename FNfloat $>$ }\\void {\bfseries Domain\+Warp\+Fractal\+Independent} (FNfloat \&x, FNfloat \&y) const
+\item 
+\mbox{\Hypertarget{classFastNoiseLite_a40b4f39cb426ab64bcd2b5b1848a83ee}\label{classFastNoiseLite_a40b4f39cb426ab64bcd2b5b1848a83ee}} 
+{\footnotesize template$<$typename FNfloat $>$ }\\void {\bfseries Domain\+Warp\+Fractal\+Independent} (FNfloat \&x, FNfloat \&y, FNfloat \&z) const
+\item 
+\mbox{\Hypertarget{classFastNoiseLite_a4fe156e6bb6c906cdbfa5fbad8845d4a}\label{classFastNoiseLite_a4fe156e6bb6c906cdbfa5fbad8845d4a}} 
+{\footnotesize template$<$typename FNfloat $>$ }\\void {\bfseries Single\+Domain\+Warp\+Basic\+Grid} (int seed, float warp\+Amp, float frequency, FNfloat x, FNfloat y, FNfloat \&xr, FNfloat \&yr) const
+\item 
+\mbox{\Hypertarget{classFastNoiseLite_a949cbc10afdf8adb2660520bb8d0d6e3}\label{classFastNoiseLite_a949cbc10afdf8adb2660520bb8d0d6e3}} 
+{\footnotesize template$<$typename FNfloat $>$ }\\void {\bfseries Single\+Domain\+Warp\+Basic\+Grid} (int seed, float warp\+Amp, float frequency, FNfloat x, FNfloat y, FNfloat z, FNfloat \&xr, FNfloat \&yr, FNfloat \&zr) const
+\item 
+\mbox{\Hypertarget{classFastNoiseLite_a74f1a02069a62bcc5c62a13b60afcfa1}\label{classFastNoiseLite_a74f1a02069a62bcc5c62a13b60afcfa1}} 
+{\footnotesize template$<$typename FNfloat $>$ }\\void {\bfseries Single\+Domain\+Warp\+Simplex\+Gradient} (int seed, float warp\+Amp, float frequency, FNfloat x, FNfloat y, FNfloat \&xr, FNfloat \&yr, bool out\+Grad\+Only) const
+\item 
+\mbox{\Hypertarget{classFastNoiseLite_a957720c93ecf450ee39d20141b22dfb6}\label{classFastNoiseLite_a957720c93ecf450ee39d20141b22dfb6}} 
+{\footnotesize template$<$typename FNfloat $>$ }\\void {\bfseries Single\+Domain\+Warp\+Open\+Simplex2\+Gradient} (int seed, float warp\+Amp, float frequency, FNfloat x, FNfloat y, FNfloat z, FNfloat \&xr, FNfloat \&yr, FNfloat \&zr, bool out\+Grad\+Only) const
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classFastNoiseLite_ade6b4177f6db7c52bf46c15f714eebfd}\label{classFastNoiseLite_ade6b4177f6db7c52bf46c15f714eebfd}} 
+static float {\bfseries Fast\+Min} (float a, float b)
+\item 
+\mbox{\Hypertarget{classFastNoiseLite_acf1d95f04dbaa363154d1a798c7a14fa}\label{classFastNoiseLite_acf1d95f04dbaa363154d1a798c7a14fa}} 
+static float {\bfseries Fast\+Max} (float a, float b)
+\item 
+\mbox{\Hypertarget{classFastNoiseLite_ad488fcd54c3c767007773fa6c868d8a4}\label{classFastNoiseLite_ad488fcd54c3c767007773fa6c868d8a4}} 
+static float {\bfseries Fast\+Abs} (float f)
+\item 
+\mbox{\Hypertarget{classFastNoiseLite_a50556149c7e3b6e660b67e73f1c11335}\label{classFastNoiseLite_a50556149c7e3b6e660b67e73f1c11335}} 
+static float {\bfseries Fast\+Sqrt} (float f)
+\item 
+\mbox{\Hypertarget{classFastNoiseLite_a3eed07e8df82818cf2f9850ebcaa19f1}\label{classFastNoiseLite_a3eed07e8df82818cf2f9850ebcaa19f1}} 
+{\footnotesize template$<$typename FNfloat $>$ }\\static int {\bfseries Fast\+Floor} (FNfloat f)
+\item 
+\mbox{\Hypertarget{classFastNoiseLite_a4b805b337efd232dbd8d679e9622f750}\label{classFastNoiseLite_a4b805b337efd232dbd8d679e9622f750}} 
+{\footnotesize template$<$typename FNfloat $>$ }\\static int {\bfseries Fast\+Round} (FNfloat f)
+\item 
+\mbox{\Hypertarget{classFastNoiseLite_a5bc190208ca84c806ce71a7961206f46}\label{classFastNoiseLite_a5bc190208ca84c806ce71a7961206f46}} 
+static float {\bfseries Lerp} (float a, float b, float t)
+\item 
+\mbox{\Hypertarget{classFastNoiseLite_a9d010e057f9d0174d2799eab30a030a2}\label{classFastNoiseLite_a9d010e057f9d0174d2799eab30a030a2}} 
+static float {\bfseries Interp\+Hermite} (float t)
+\item 
+\mbox{\Hypertarget{classFastNoiseLite_a402dd514176be219f2d894ab1905307c}\label{classFastNoiseLite_a402dd514176be219f2d894ab1905307c}} 
+static float {\bfseries Interp\+Quintic} (float t)
+\item 
+\mbox{\Hypertarget{classFastNoiseLite_ad73e0d0258f4d5fbaf51e9eee76568a8}\label{classFastNoiseLite_ad73e0d0258f4d5fbaf51e9eee76568a8}} 
+static float {\bfseries Cubic\+Lerp} (float a, float b, float c, float d, float t)
+\item 
+\mbox{\Hypertarget{classFastNoiseLite_a339c5b8d2e0f886099b0ea6a9cd78404}\label{classFastNoiseLite_a339c5b8d2e0f886099b0ea6a9cd78404}} 
+static float {\bfseries Ping\+Pong} (float t)
+\item 
+\mbox{\Hypertarget{classFastNoiseLite_a5d9e063c01cccb611027bcc85cb8a28d}\label{classFastNoiseLite_a5d9e063c01cccb611027bcc85cb8a28d}} 
+static int {\bfseries Hash} (int seed, int x\+Primed, int y\+Primed)
+\item 
+\mbox{\Hypertarget{classFastNoiseLite_a863aa9a2d782f02e9d14f58da2a4b8c5}\label{classFastNoiseLite_a863aa9a2d782f02e9d14f58da2a4b8c5}} 
+static int {\bfseries Hash} (int seed, int x\+Primed, int y\+Primed, int z\+Primed)
+\item 
+\mbox{\Hypertarget{classFastNoiseLite_ac787ef53ff06dfa096392ff74eea9596}\label{classFastNoiseLite_ac787ef53ff06dfa096392ff74eea9596}} 
+static float {\bfseries Val\+Coord} (int seed, int x\+Primed, int y\+Primed)
+\item 
+\mbox{\Hypertarget{classFastNoiseLite_abe0152f0a6f0bdae3e5b7bd9e1eda0c9}\label{classFastNoiseLite_abe0152f0a6f0bdae3e5b7bd9e1eda0c9}} 
+static float {\bfseries Val\+Coord} (int seed, int x\+Primed, int y\+Primed, int z\+Primed)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classFastNoiseLite_af71c4786508dc681eb9311e17cc5bf57}\label{classFastNoiseLite_af71c4786508dc681eb9311e17cc5bf57}} 
+int {\bfseries m\+Seed}
+\item 
+\mbox{\Hypertarget{classFastNoiseLite_a4bf74a82bf017d08b01654b597400d6d}\label{classFastNoiseLite_a4bf74a82bf017d08b01654b597400d6d}} 
+float {\bfseries m\+Frequency}
+\item 
+\mbox{\Hypertarget{classFastNoiseLite_ad6ca1c3cf47d8968a60270ee9097357a}\label{classFastNoiseLite_ad6ca1c3cf47d8968a60270ee9097357a}} 
+Noise\+Type {\bfseries m\+Noise\+Type}
+\item 
+\mbox{\Hypertarget{classFastNoiseLite_a60b5836312ea4abec9054ca0ac1f0cab}\label{classFastNoiseLite_a60b5836312ea4abec9054ca0ac1f0cab}} 
+Rotation\+Type3D {\bfseries m\+Rotation\+Type3D}
+\item 
+\mbox{\Hypertarget{classFastNoiseLite_ad27490f738720c25a7af6cbd61660926}\label{classFastNoiseLite_ad27490f738720c25a7af6cbd61660926}} 
+Transform\+Type3D {\bfseries m\+Transform\+Type3D}
+\item 
+\mbox{\Hypertarget{classFastNoiseLite_acee789a9d12be778becfb4f8402cb42a}\label{classFastNoiseLite_acee789a9d12be778becfb4f8402cb42a}} 
+Fractal\+Type {\bfseries m\+Fractal\+Type}
+\item 
+\mbox{\Hypertarget{classFastNoiseLite_a95483e2a43133bcd9b18bd451f385e6c}\label{classFastNoiseLite_a95483e2a43133bcd9b18bd451f385e6c}} 
+int {\bfseries m\+Octaves}
+\item 
+\mbox{\Hypertarget{classFastNoiseLite_a027a36c2a4d43086265e336b6eba913b}\label{classFastNoiseLite_a027a36c2a4d43086265e336b6eba913b}} 
+float {\bfseries m\+Lacunarity}
+\item 
+\mbox{\Hypertarget{classFastNoiseLite_adff27fcbd76388e9ce719e5199471b86}\label{classFastNoiseLite_adff27fcbd76388e9ce719e5199471b86}} 
+float {\bfseries m\+Gain}
+\item 
+\mbox{\Hypertarget{classFastNoiseLite_ae6d2d4bf368abc39361ac3b4f20ca119}\label{classFastNoiseLite_ae6d2d4bf368abc39361ac3b4f20ca119}} 
+float {\bfseries m\+Weighted\+Strength}
+\item 
+\mbox{\Hypertarget{classFastNoiseLite_a5b93c33bf4a5c1646f237f1c86afd5e9}\label{classFastNoiseLite_a5b93c33bf4a5c1646f237f1c86afd5e9}} 
+float {\bfseries m\+Ping\+Pong\+Strength}
+\item 
+\mbox{\Hypertarget{classFastNoiseLite_a9449a5cebea9638ca8626cd5219bf7ba}\label{classFastNoiseLite_a9449a5cebea9638ca8626cd5219bf7ba}} 
+float {\bfseries m\+Fractal\+Bounding}
+\item 
+\mbox{\Hypertarget{classFastNoiseLite_a0abe941d5947124334543312551d1402}\label{classFastNoiseLite_a0abe941d5947124334543312551d1402}} 
+Cellular\+Distance\+Function {\bfseries m\+Cellular\+Distance\+Function}
+\item 
+\mbox{\Hypertarget{classFastNoiseLite_aeb6bbde987e153de6aca302460055285}\label{classFastNoiseLite_aeb6bbde987e153de6aca302460055285}} 
+Cellular\+Return\+Type {\bfseries m\+Cellular\+Return\+Type}
+\item 
+\mbox{\Hypertarget{classFastNoiseLite_a50dc93ba0a397c58d8c1e087735df4af}\label{classFastNoiseLite_a50dc93ba0a397c58d8c1e087735df4af}} 
+float {\bfseries m\+Cellular\+Jitter\+Modifier}
+\item 
+\mbox{\Hypertarget{classFastNoiseLite_a4e37b8d4d38b64e1de4f4497c8e0ff23}\label{classFastNoiseLite_a4e37b8d4d38b64e1de4f4497c8e0ff23}} 
+Domain\+Warp\+Type {\bfseries m\+Domain\+Warp\+Type}
+\item 
+\mbox{\Hypertarget{classFastNoiseLite_aa7b078a1bbef83bc82320aeaeb420000}\label{classFastNoiseLite_aa7b078a1bbef83bc82320aeaeb420000}} 
+Transform\+Type3D {\bfseries m\+Warp\+Transform\+Type3D}
+\item 
+\mbox{\Hypertarget{classFastNoiseLite_a444efe1dc074914f91d8549a409ebdde}\label{classFastNoiseLite_a444efe1dc074914f91d8549a409ebdde}} 
+float {\bfseries m\+Domain\+Warp\+Amp}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classFastNoiseLite_ad9f773b6c14bf912520629c7ba3e318e}\label{classFastNoiseLite_ad9f773b6c14bf912520629c7ba3e318e}} 
+static const int {\bfseries PrimeX} = 501125321
+\item 
+\mbox{\Hypertarget{classFastNoiseLite_ae61601e33e67631a0c8345b2eddbf539}\label{classFastNoiseLite_ae61601e33e67631a0c8345b2eddbf539}} 
+static const int {\bfseries PrimeY} = 1136930381
+\item 
+\mbox{\Hypertarget{classFastNoiseLite_a702c2b7d315f389e0751bb33412c0c0b}\label{classFastNoiseLite_a702c2b7d315f389e0751bb33412c0c0b}} 
+static const int {\bfseries PrimeZ} = 1720413743
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classFastNoiseLite_aac059288dbce5a0ddcdd54c82df9aaf9}\label{classFastNoiseLite_aac059288dbce5a0ddcdd54c82df9aaf9}} 
+\index{FastNoiseLite@{FastNoiseLite}!FastNoiseLite@{FastNoiseLite}}
+\index{FastNoiseLite@{FastNoiseLite}!FastNoiseLite@{FastNoiseLite}}
+\doxysubsubsection{\texorpdfstring{FastNoiseLite()}{FastNoiseLite()}}
+{\footnotesize\ttfamily Fast\+Noise\+Lite\+::\+Fast\+Noise\+Lite (\begin{DoxyParamCaption}\item[{int}]{seed = {\ttfamily 1337} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Create new Fast\+Noise object with optional seed 
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classFastNoiseLite_a779a61505f0ba2c3854c3b14e86baf08}\label{classFastNoiseLite_a779a61505f0ba2c3854c3b14e86baf08}} 
+\index{FastNoiseLite@{FastNoiseLite}!DomainWarp@{DomainWarp}}
+\index{DomainWarp@{DomainWarp}!FastNoiseLite@{FastNoiseLite}}
+\doxysubsubsection{\texorpdfstring{DomainWarp()}{DomainWarp()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename FNfloat $>$ \\
+void Fast\+Noise\+Lite\+::\+Domain\+Warp (\begin{DoxyParamCaption}\item[{FNfloat \&}]{x,  }\item[{FNfloat \&}]{y }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+2D warps the input position using current domain warp settings 
+
+Example usage with Get\+Noise 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{classFastNoiseLite_a779a61505f0ba2c3854c3b14e86baf08}{DomainWarp}}(x, y)}
+\DoxyCodeLine{noise = \mbox{\hyperlink{classFastNoiseLite_ac5acf978145eba3730bb46033546c89c}{GetNoise}}(x, y)}
+
+\end{DoxyCode}
+ \mbox{\Hypertarget{classFastNoiseLite_a7e24432919ce9cf6930442f5bdeaeb15}\label{classFastNoiseLite_a7e24432919ce9cf6930442f5bdeaeb15}} 
+\index{FastNoiseLite@{FastNoiseLite}!DomainWarp@{DomainWarp}}
+\index{DomainWarp@{DomainWarp}!FastNoiseLite@{FastNoiseLite}}
+\doxysubsubsection{\texorpdfstring{DomainWarp()}{DomainWarp()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename FNfloat $>$ \\
+void Fast\+Noise\+Lite\+::\+Domain\+Warp (\begin{DoxyParamCaption}\item[{FNfloat \&}]{x,  }\item[{FNfloat \&}]{y,  }\item[{FNfloat \&}]{z }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+3D warps the input position using current domain warp settings 
+
+Example usage with Get\+Noise 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\mbox{\hyperlink{classFastNoiseLite_a779a61505f0ba2c3854c3b14e86baf08}{DomainWarp}}(x, y, z)}
+\DoxyCodeLine{noise = \mbox{\hyperlink{classFastNoiseLite_ac5acf978145eba3730bb46033546c89c}{GetNoise}}(x, y, z)}
+
+\end{DoxyCode}
+ \mbox{\Hypertarget{classFastNoiseLite_ac5acf978145eba3730bb46033546c89c}\label{classFastNoiseLite_ac5acf978145eba3730bb46033546c89c}} 
+\index{FastNoiseLite@{FastNoiseLite}!GetNoise@{GetNoise}}
+\index{GetNoise@{GetNoise}!FastNoiseLite@{FastNoiseLite}}
+\doxysubsubsection{\texorpdfstring{GetNoise()}{GetNoise()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename FNfloat $>$ \\
+float Fast\+Noise\+Lite\+::\+Get\+Noise (\begin{DoxyParamCaption}\item[{FNfloat}]{x,  }\item[{FNfloat}]{y }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+2D noise at given position using current settings 
+
+\begin{DoxyReturn}{Returns}
+Noise output bounded between -\/1...1 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classFastNoiseLite_ab283c7ec7664484731c49f580a73d425}\label{classFastNoiseLite_ab283c7ec7664484731c49f580a73d425}} 
+\index{FastNoiseLite@{FastNoiseLite}!GetNoise@{GetNoise}}
+\index{GetNoise@{GetNoise}!FastNoiseLite@{FastNoiseLite}}
+\doxysubsubsection{\texorpdfstring{GetNoise()}{GetNoise()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename FNfloat $>$ \\
+float Fast\+Noise\+Lite\+::\+Get\+Noise (\begin{DoxyParamCaption}\item[{FNfloat}]{x,  }\item[{FNfloat}]{y,  }\item[{FNfloat}]{z }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+3D noise at given position using current settings 
+
+\begin{DoxyReturn}{Returns}
+Noise output bounded between -\/1...1 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classFastNoiseLite_a3bf01ec5bf90b724d43dfffd77280a1a}\label{classFastNoiseLite_a3bf01ec5bf90b724d43dfffd77280a1a}} 
+\index{FastNoiseLite@{FastNoiseLite}!SetCellularDistanceFunction@{SetCellularDistanceFunction}}
+\index{SetCellularDistanceFunction@{SetCellularDistanceFunction}!FastNoiseLite@{FastNoiseLite}}
+\doxysubsubsection{\texorpdfstring{SetCellularDistanceFunction()}{SetCellularDistanceFunction()}}
+{\footnotesize\ttfamily void Fast\+Noise\+Lite\+::\+Set\+Cellular\+Distance\+Function (\begin{DoxyParamCaption}\item[{Cellular\+Distance\+Function}]{cellular\+Distance\+Function }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets distance function used in cellular noise calculations 
+
+Default\+: Distance \mbox{\Hypertarget{classFastNoiseLite_ae49c55743d5782ad3c752ccf2b08ef00}\label{classFastNoiseLite_ae49c55743d5782ad3c752ccf2b08ef00}} 
+\index{FastNoiseLite@{FastNoiseLite}!SetCellularJitter@{SetCellularJitter}}
+\index{SetCellularJitter@{SetCellularJitter}!FastNoiseLite@{FastNoiseLite}}
+\doxysubsubsection{\texorpdfstring{SetCellularJitter()}{SetCellularJitter()}}
+{\footnotesize\ttfamily void Fast\+Noise\+Lite\+::\+Set\+Cellular\+Jitter (\begin{DoxyParamCaption}\item[{float}]{cellular\+Jitter }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the maximum distance a cellular point can move from it\textquotesingle{}s grid position 
+
+Default\+: 1.\+0 Note\+: Setting this higher than 1 will cause artifacts 
+
+~\newline
+ \mbox{\Hypertarget{classFastNoiseLite_a376f2fc231bbdc600fd70f423e84da8f}\label{classFastNoiseLite_a376f2fc231bbdc600fd70f423e84da8f}} 
+\index{FastNoiseLite@{FastNoiseLite}!SetCellularReturnType@{SetCellularReturnType}}
+\index{SetCellularReturnType@{SetCellularReturnType}!FastNoiseLite@{FastNoiseLite}}
+\doxysubsubsection{\texorpdfstring{SetCellularReturnType()}{SetCellularReturnType()}}
+{\footnotesize\ttfamily void Fast\+Noise\+Lite\+::\+Set\+Cellular\+Return\+Type (\begin{DoxyParamCaption}\item[{Cellular\+Return\+Type}]{cellular\+Return\+Type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets return type from cellular noise calculations 
+
+Default\+: Euclidean\+Sq \mbox{\Hypertarget{classFastNoiseLite_a5d5677498f978e13915b241901885cc9}\label{classFastNoiseLite_a5d5677498f978e13915b241901885cc9}} 
+\index{FastNoiseLite@{FastNoiseLite}!SetDomainWarpAmp@{SetDomainWarpAmp}}
+\index{SetDomainWarpAmp@{SetDomainWarpAmp}!FastNoiseLite@{FastNoiseLite}}
+\doxysubsubsection{\texorpdfstring{SetDomainWarpAmp()}{SetDomainWarpAmp()}}
+{\footnotesize\ttfamily void Fast\+Noise\+Lite\+::\+Set\+Domain\+Warp\+Amp (\begin{DoxyParamCaption}\item[{float}]{domain\+Warp\+Amp }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the maximum warp distance from original position when using Domain\+Warp(...) 
+
+Default\+: 1.\+0 \mbox{\Hypertarget{classFastNoiseLite_a22e449e628ce14581ca277cb8915f1ef}\label{classFastNoiseLite_a22e449e628ce14581ca277cb8915f1ef}} 
+\index{FastNoiseLite@{FastNoiseLite}!SetDomainWarpType@{SetDomainWarpType}}
+\index{SetDomainWarpType@{SetDomainWarpType}!FastNoiseLite@{FastNoiseLite}}
+\doxysubsubsection{\texorpdfstring{SetDomainWarpType()}{SetDomainWarpType()}}
+{\footnotesize\ttfamily void Fast\+Noise\+Lite\+::\+Set\+Domain\+Warp\+Type (\begin{DoxyParamCaption}\item[{Domain\+Warp\+Type}]{domain\+Warp\+Type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the warp algorithm when using Domain\+Warp(...) 
+
+Default\+: Open\+Simplex2 \mbox{\Hypertarget{classFastNoiseLite_aa1b68b34d506dd498533d7849a41fa78}\label{classFastNoiseLite_aa1b68b34d506dd498533d7849a41fa78}} 
+\index{FastNoiseLite@{FastNoiseLite}!SetFractalGain@{SetFractalGain}}
+\index{SetFractalGain@{SetFractalGain}!FastNoiseLite@{FastNoiseLite}}
+\doxysubsubsection{\texorpdfstring{SetFractalGain()}{SetFractalGain()}}
+{\footnotesize\ttfamily void Fast\+Noise\+Lite\+::\+Set\+Fractal\+Gain (\begin{DoxyParamCaption}\item[{float}]{gain }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets octave gain for all fractal noise types 
+
+Default\+: 0.\+5 \mbox{\Hypertarget{classFastNoiseLite_a29f35540c2eba7aa4378a73481bce283}\label{classFastNoiseLite_a29f35540c2eba7aa4378a73481bce283}} 
+\index{FastNoiseLite@{FastNoiseLite}!SetFractalLacunarity@{SetFractalLacunarity}}
+\index{SetFractalLacunarity@{SetFractalLacunarity}!FastNoiseLite@{FastNoiseLite}}
+\doxysubsubsection{\texorpdfstring{SetFractalLacunarity()}{SetFractalLacunarity()}}
+{\footnotesize\ttfamily void Fast\+Noise\+Lite\+::\+Set\+Fractal\+Lacunarity (\begin{DoxyParamCaption}\item[{float}]{lacunarity }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets octave lacunarity for all fractal noise types 
+
+Default\+: 2.\+0 \mbox{\Hypertarget{classFastNoiseLite_a220275b5be1d2137f0a2f232a07e0792}\label{classFastNoiseLite_a220275b5be1d2137f0a2f232a07e0792}} 
+\index{FastNoiseLite@{FastNoiseLite}!SetFractalOctaves@{SetFractalOctaves}}
+\index{SetFractalOctaves@{SetFractalOctaves}!FastNoiseLite@{FastNoiseLite}}
+\doxysubsubsection{\texorpdfstring{SetFractalOctaves()}{SetFractalOctaves()}}
+{\footnotesize\ttfamily void Fast\+Noise\+Lite\+::\+Set\+Fractal\+Octaves (\begin{DoxyParamCaption}\item[{int}]{octaves }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets octave count for all fractal noise types 
+
+Default\+: 3 \mbox{\Hypertarget{classFastNoiseLite_ac09b58924278defc443addb34cf80f59}\label{classFastNoiseLite_ac09b58924278defc443addb34cf80f59}} 
+\index{FastNoiseLite@{FastNoiseLite}!SetFractalPingPongStrength@{SetFractalPingPongStrength}}
+\index{SetFractalPingPongStrength@{SetFractalPingPongStrength}!FastNoiseLite@{FastNoiseLite}}
+\doxysubsubsection{\texorpdfstring{SetFractalPingPongStrength()}{SetFractalPingPongStrength()}}
+{\footnotesize\ttfamily void Fast\+Noise\+Lite\+::\+Set\+Fractal\+Ping\+Pong\+Strength (\begin{DoxyParamCaption}\item[{float}]{ping\+Pong\+Strength }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets strength of the fractal ping pong effect 
+
+Default\+: 2.\+0 \mbox{\Hypertarget{classFastNoiseLite_aaaff254bccb75fe64d7eaa75fe3930d6}\label{classFastNoiseLite_aaaff254bccb75fe64d7eaa75fe3930d6}} 
+\index{FastNoiseLite@{FastNoiseLite}!SetFractalType@{SetFractalType}}
+\index{SetFractalType@{SetFractalType}!FastNoiseLite@{FastNoiseLite}}
+\doxysubsubsection{\texorpdfstring{SetFractalType()}{SetFractalType()}}
+{\footnotesize\ttfamily void Fast\+Noise\+Lite\+::\+Set\+Fractal\+Type (\begin{DoxyParamCaption}\item[{Fractal\+Type}]{fractal\+Type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets method for combining octaves in all fractal noise types 
+
+Default\+: None Note\+: Fractal\+Type\+\_\+\+Domain\+Warp... only affects Domain\+Warp(...) \mbox{\Hypertarget{classFastNoiseLite_aca5f269464ab16934796ded272a12ffc}\label{classFastNoiseLite_aca5f269464ab16934796ded272a12ffc}} 
+\index{FastNoiseLite@{FastNoiseLite}!SetFractalWeightedStrength@{SetFractalWeightedStrength}}
+\index{SetFractalWeightedStrength@{SetFractalWeightedStrength}!FastNoiseLite@{FastNoiseLite}}
+\doxysubsubsection{\texorpdfstring{SetFractalWeightedStrength()}{SetFractalWeightedStrength()}}
+{\footnotesize\ttfamily void Fast\+Noise\+Lite\+::\+Set\+Fractal\+Weighted\+Strength (\begin{DoxyParamCaption}\item[{float}]{weighted\+Strength }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets octave weighting for all none Domain\+Warp fratal types 
+
+Default\+: 0.\+0 Note\+: Keep between 0...1 to maintain -\/1...1 output bounding \mbox{\Hypertarget{classFastNoiseLite_a6e268d7e687b658f83dee38ea7dc1afc}\label{classFastNoiseLite_a6e268d7e687b658f83dee38ea7dc1afc}} 
+\index{FastNoiseLite@{FastNoiseLite}!SetFrequency@{SetFrequency}}
+\index{SetFrequency@{SetFrequency}!FastNoiseLite@{FastNoiseLite}}
+\doxysubsubsection{\texorpdfstring{SetFrequency()}{SetFrequency()}}
+{\footnotesize\ttfamily void Fast\+Noise\+Lite\+::\+Set\+Frequency (\begin{DoxyParamCaption}\item[{float}]{frequency }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets frequency for all noise types 
+
+Default\+: 0.\+01 \mbox{\Hypertarget{classFastNoiseLite_af345b52cbe9b499eb6a0c1d9b72a738f}\label{classFastNoiseLite_af345b52cbe9b499eb6a0c1d9b72a738f}} 
+\index{FastNoiseLite@{FastNoiseLite}!SetNoiseType@{SetNoiseType}}
+\index{SetNoiseType@{SetNoiseType}!FastNoiseLite@{FastNoiseLite}}
+\doxysubsubsection{\texorpdfstring{SetNoiseType()}{SetNoiseType()}}
+{\footnotesize\ttfamily void Fast\+Noise\+Lite\+::\+Set\+Noise\+Type (\begin{DoxyParamCaption}\item[{Noise\+Type}]{noise\+Type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets noise algorithm used for Get\+Noise(...) 
+
+Default\+: Open\+Simplex2 \mbox{\Hypertarget{classFastNoiseLite_a704dfe555b6ee0456707bb31e0aa8c0c}\label{classFastNoiseLite_a704dfe555b6ee0456707bb31e0aa8c0c}} 
+\index{FastNoiseLite@{FastNoiseLite}!SetRotationType3D@{SetRotationType3D}}
+\index{SetRotationType3D@{SetRotationType3D}!FastNoiseLite@{FastNoiseLite}}
+\doxysubsubsection{\texorpdfstring{SetRotationType3D()}{SetRotationType3D()}}
+{\footnotesize\ttfamily void Fast\+Noise\+Lite\+::\+Set\+Rotation\+Type3D (\begin{DoxyParamCaption}\item[{Rotation\+Type3D}]{rotation\+Type3D }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets domain rotation type for 3D Noise and 3D Domain\+Warp. Can aid in reducing directional artifacts when sampling a 2D plane in 3D 
+
+Default\+: None \mbox{\Hypertarget{classFastNoiseLite_a4d2f591a9fb81fa37ec4ae45694ae90e}\label{classFastNoiseLite_a4d2f591a9fb81fa37ec4ae45694ae90e}} 
+\index{FastNoiseLite@{FastNoiseLite}!SetSeed@{SetSeed}}
+\index{SetSeed@{SetSeed}!FastNoiseLite@{FastNoiseLite}}
+\doxysubsubsection{\texorpdfstring{SetSeed()}{SetSeed()}}
+{\footnotesize\ttfamily void Fast\+Noise\+Lite\+::\+Set\+Seed (\begin{DoxyParamCaption}\item[{int}]{seed }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets seed used for all noise types 
+
+Default\+: 1337 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Fast\+Noise\+Lite.\+h\end{DoxyCompactItemize}
